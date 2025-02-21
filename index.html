@@ -417,25 +417,15 @@ https://templatemo.com/tm-586-scholar
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-<!-- CHẶN COPY WEB-->   
-
-document.addEventListener("contextmenu", (event) => event.preventDefault()); // Disable right-click
+document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.addEventListener("keydown", (event) => {
     if (event.key === "F12" || 
         (event.ctrlKey && event.shiftKey && event.key === "I") || 
-        (event.ctrlKey && event.key === "U")) { 
+        (event.ctrlKey && event.key === "U") || 
+        (event.ctrlKey && event.key === "S")) { 
         event.preventDefault();
     }
 });
-
-document.addEventListener("keydown", (event) => {
-    if (event.ctrlKey && event.key === "s") { 
-        event.preventDefault();
-        alert("Saving this page is disabled!");
-    }
-})
-
-	<!-- CHẶN COPY WEB--> 
 </script>
   </body>
 </html>
