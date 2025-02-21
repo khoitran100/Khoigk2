@@ -103,16 +103,7 @@ https://templatemo.com/tm-586-scholar
     </script>
 	
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
+
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
@@ -294,6 +285,70 @@ https://templatemo.com/tm-586-scholar
         <p>Copyright © 2036 Công Ty TNHH Giả Kim. Mọi quyền được bảo lưu. &nbsp;&nbsp;&nbsp; Designer: <a href="tmk.html" rel="nofollow" target="_blank">Khôi Trần</a></p>
       </div>
     </div>
+	<title>Do not Copy</title>
+    <style>
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <script type=”text/JavaScript”>
+        function killCopy(e){ 
+            return false } 
+        function reEnable(){ 
+            return true } 
+        document.onselectstart = new Function (“return false”) 
+        
+        if (window.sidebar){  
+            document.onmousedown=killCopy 
+            document.onclick=reEnable 
+        }
+    </script>
+
+<script language="JavaScript">
+    window.onload = function() {
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        }, false);
+        document.addEventListener("keydown", function(e) {
+            //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+                disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+                disabledEvent(e);
+            }
+        }, false);
+
+        function disabledEvent(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation();
+            } else if (window.event) {
+                window.event.cancelBubble = true;
+            }
+            e.preventDefault();
+            return false;
+        }
+    };
+</script>
   </footer>
 
   <!-- Scripts -->
@@ -306,25 +361,7 @@ https://templatemo.com/tm-586-scholar
   <script src="assets/js/custom.js"></script>
 
 <script>
-<!-- CHẶN COPY WEB-->   
 
-document.addEventListener("contextmenu", (event) => event.preventDefault()); // Disable right-click
-document.addEventListener("keydown", (event) => {
-    if (event.key === "F12" || 
-        (event.ctrlKey && event.shiftKey && event.key === "I") || 
-        (event.ctrlKey && event.key === "U")) { 
-        event.preventDefault();
-    }
-});
-
-document.addEventListener("keydown", (event) => {
-    if (event.ctrlKey && event.key === "s") { 
-        event.preventDefault();
-        alert("Saving this page is disabled!");
-    }
-})
-
-	<!-- CHẶN COPY WEB--> 
 </script>
   </body>
 </html>
