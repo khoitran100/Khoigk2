@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Tư Vấn - Hướng Nghiệp CNTT - Giả Kim</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/service.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico/favicon-96x96.png">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
+	<style>
+/* Reset chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Nội dung chính */
+.question {
+    max-width: 600px;
+    margin: 30px auto 50px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hiệu ứng fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Câu hỏi */
+.question p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Ẩn radio mặc định */
+.question input[type="radio"] {
+    display: none;
+}
+
+/* Hiệu ứng khi hover */
+.question label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+/* Khi hover vào câu hỏi */
+.question label:hover {
+    background: #e3f2fd;
+    transform: scale(1.03);
+}
+
+/* Khi chọn giữ lại hiệu ứng */
+.question input[type="radio"]:checked + label {
+    background: #007bff;
+    color: white;
+    transform: scale(1.05);
+    font-weight: bold;
+    border: 2px solid #0056b3;
+    box-shadow: 0 0 10px rgba(0, 91, 187, 0.4);
+    animation: glow 0.5s ease-in-out forwards;
+}
+
+/* Hiệu ứng sáng dần khi chọn */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 91, 187, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 91, 187, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 91, 187, 0.7);
+    }
+}
+
+/* Hiệu ứng nhỏ cho icon dấu tích (đánh dấu đã chọn) */
+.question input[type="radio"]:checked + label::after {
+    content: "✔";
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Button */
+.question button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.question button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Nút "Xem Kết Quả" */
+.result-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6200ea, #9c27b0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+	width: 16%;
+	white-space:nowrap;
+}
+
+/* Hiệu ứng hover */
+.result-btn:hover {
+    background: linear-gradient(135deg, #9c27b0, #6200ea);
+    box-shadow: 0px 5px 15px rgba(156, 39, 176, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Hiệu ứng khi nhấn */
+.result-btn:active {
+    transform: scale(0.95);
+}
+
+/* Hiệu ứng loading */
+.result-btn.loading::after {
+    content: "";
+    position: absolute;
+    left: 93%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+/* Animation quay vòng */
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Kết quả */
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left; /* Canh trái */
+    display: inline-block;
+    min-width: 300px; /* Để đảm bảo không bị quá ngắn */
+    padding-left: 20px; /* Dịch chữ sang phải */
+    margin-left: 418px; /* Đẩy nguyên khối sang phải */
+}
+
+/* Thiết lập cho câu hỏi */
+.question {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Mặc định của label */
+.option {
+    display: block;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Hiệu ứng hover */
+.option:hover {
+    background: #f0f0f0;
+    border-color: #6200ea;
+}
+
+/* Khi được chọn */
+input[type="radio"]:checked + .option {
+    background: #6200ea;
+    color: white;
+    border-color: #6200ea;
+    font-weight: bold;
+}
+
+/* Hiện dấu tích khi đã chọn */
+input[type="radio"]:checked + .option::after {
+    content: "✔";
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Phần giới thiệu */
+.intro {
+    text-align: center;
+    background: linear-gradient(135deg, #007bff, #6200ea);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+	color:white;
+}
+
+.intro p {
+    font-size: 18px;
+    margin-bottom: 5px;
+	color:white;
+}
+
+.glow {
+    font-size: 40px;
+    color: #black;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Viền phát sáng liên tục */
+.glow::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00, #ff0099);
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Khi hover, chữ phát sáng mạnh và có viền ánh sáng */
+.glow:hover {
+    color: #b3ff1a;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffcc00, 0 0 40px #ff0099;
+}
+
+.glow:hover::before {
+    opacity: 1;
+}
+
+
+
+    </style>
+  </head>
+
+<body style="background-color: #e6f7ff">
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let searchBox = document.getElementById("searchBox");
+
+            searchBox.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // Stop any default behavior
+                    window.location.href = "404.html"; // Redirect to the 404 page
+                }
+            });
+        });
+		 
+    </script>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+				   <img src="assets/images/logo.png" class="logo-title" alt="logo">
+				   </a>
+				   
+					 <a href="index.html" class="logo">
+					 
+                        <h1>giả kim</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#" >
+                        <input type="text" placeholder="Nhập thứ bạn muốn tìm..." id='searchBox' name="searchKeyword" onkeypress="handle" autocomplete="off"/>
+                        <i class="fa fa-search" ></i>
+                      </form>
+                    </div>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Trang Chủ</a></li>
+                      <li class="scroll-to-section"><a href="#services" class="active">Tư Vấn</a></li>
+                      <li><a href="courses.html">Thông Tin</a></li>
+                      <li><a href="team.html">Đội Ngũ</a></li>
+                      <li><a href="event.html">Sự Kiện</a></li>
+                      <li><a href="lienhe.html">Liên Hệ</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+  <div class="main-banner" id="top" width="10"></div>
+              <div class="header-text">
+                  </div>
+		
+		<div class="intro">
+    <h1>🔍 Trắc Nghiệm Tư Vấn Hướng Nghiệp Công Nghệ Thông Tin</h1>
+    <p>Chào mừng bạn đến với hệ thống trắc nghiệm tư vấn hướng nghiệp CNTT của Giả Kim! 🚀</p>
+    <p>Hãy trả lời các câu hỏi dưới đây để khám phá ngành nghề phù hợp với bạn trong lĩnh vực Công Nghệ Thông Tin.</p>
+	</div>
+
+<div class="question">
+    <p>1. Bạn thích làm việc với?</p>
+    <input type="radio" name="q1" id="q1-1" value="1" hidden>
+    <label for="q1-1" class="option">Code và thuật toán</label>
+
+    <input type="radio" name="q1" id="q1-2" value="2" hidden>
+    <label for="q1-2" class="option">Dữ liệu và phân tích</label>
+
+    <input type="radio" name="q1" id="q1-3" value="3" hidden>
+    <label for="q1-3" class="option">Bảo mật và hacker mũ trắng</label>
+</div>
+<div class="question">
+    <p>2. Bạn yêu thích phong cách làm việc nào nhất?</p>
+    
+    <input type="radio" name="q2" id="q2-1" value="1" hidden>
+    <label for="q2-1" class="option">Làm việc độc lập</label>
+
+    <input type="radio" name="q2" id="q2-2" value="2" hidden>
+    <label for="q2-2" class="option">Hợp tác nhóm</label>
+
+    <input type="radio" name="q2" id="q2-3" value="3" hidden>
+    <label for="q2-3" class="option">Làm việc dưới áp lực cao</label>
+
+    <input type="radio" name="q2" id="q2-4" value="4" hidden>
+    <label for="q2-4" class="option">Làm việc linh hoạt, sáng tạo</label>
+</div>
+<div class="question">
+    <p>3. Bạn thích làm việc với loại công nghệ nào?</p>
+    
+    <input type="radio" name="q3" id="q3-1" value="1" hidden>
+    <label for="q3-1" class="option">Phát triển ứng dụng di động và web</label>
+
+    <input type="radio" name="q3" id="q3-2" value="2" hidden>
+    <label for="q3-2" class="option">Xử lý dữ liệu và trí tuệ nhân tạo</label>
+
+    <input type="radio" name="q3" id="q3-3" value="3" hidden>
+    <label for="q3-3" class="option">Hệ thống mạng và bảo mật</label>
+
+    <input type="radio" name="q3" id="q3-4" value="4" hidden>
+    <label for="q3-4" class="option">Quản lý cơ sở hạ tầng CNTT</label>
+
+    <input type="radio" name="q3" id="q3-5" value="5" hidden>
+    <label for="q3-5" class="option">Thiết kế giao diện người dùng</label>
+
+    <input type="radio" name="q3" id="q3-6" value="6" hidden>
+    <label for="q3-6" class="option">Phát triển chatbot và hệ thống AI</label>
+</div>
+
+<div class="question">
+    <p>4. Bạn muốn công việc của mình mang lại điều gì?</p>
+
+    <input type="radio" name="q4" id="q4-1" value="1" hidden>
+    <label for="q4-1" class="option">Sáng tạo sản phẩm mới</label>
+
+    <input type="radio" name="q4" id="q4-2" value="2" hidden>
+    <label for="q4-2" class="option">Tối ưu hóa và phân tích dữ liệu</label>
+
+    <input type="radio" name="q4" id="q4-3" value="3" hidden>
+    <label for="q4-3" class="option">Bảo vệ thông tin và hệ thống</label>
+
+    <input type="radio" name="q4" id="q4-4" value="4" hidden>
+    <label for="q4-4" class="option">Duy trì và quản lý hệ thống</label>
+
+    <input type="radio" name="q4" id="q4-5" value="5" hidden>
+    <label for="q4-5" class="option">Tạo ra trải nghiệm người dùng tuyệt vời</label>
+
+    <input type="radio" name="q4" id="q4-6" value="6" hidden>
+    <label for="q4-6" class="option">Nghiên cứu và phát triển AI</label>
+</div>
+
+<div class="question">
+    <p>5. Điều gì khiến bạn cảm thấy hứng thú nhất?</p>
+
+    <input type="radio" name="q5" id="q5-1" value="1" hidden>
+    <label for="q5-1" class="option">Viết code và phát triển phần mềm</label>
+
+    <input type="radio" name="q5" id="q5-2" value="2" hidden>
+    <label for="q5-2" class="option">Tìm ra thông tin hữu ích từ dữ liệu</label>
+
+    <input type="radio" name="q5" id="q5-3" value="3" hidden>
+    <label for="q5-3" class="option">Phát hiện và ngăn chặn hacker</label>
+
+    <input type="radio" name="q5" id="q5-4" value="4" hidden>
+    <label for="q5-4" class="option">Đảm bảo hệ thống luôn hoạt động ổn định</label>
+
+    <input type="radio" name="q5" id="q5-5" value="5" hidden>
+    <label for="q5-5" class="option">Thiết kế hình ảnh, bố cục giao diện</label>
+
+    <input type="radio" name="q5" id="q5-6" value="6" hidden>
+    <label for="q5-6" class="option">Dạy máy tính suy nghĩ và học hỏi</label>
+</div>
+        <button class="result-btn" onclick="showResult(this)">🎯 Xem Kết Quả</button>
+		<div class="result" id="result"></div>
+
+    </section>
+<h2 class="glow">Ngày hội tư vấn ngành CNTT Aptech Open Day 2019</h2>
+<div class="video-container" style="margin-left:290px;margin-top:50px;" >
+        <iframe 
+            width="560" height="315" src="https://www.youtube.com/embed/vh8cx8mcsZ4?autoplay=1&mute=1&si=YvaGpYNxFoXU6vok"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    </div>
+  
+  
+  
+  
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2036 Công Ty TNHH Giả Kim. Mọi quyền được bảo lưu. &nbsp;&nbsp;&nbsp; Designer: <a href="tmk.html" rel="nofollow" target="_blank">Khôi Trần</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+<script>
+
+function showResult(button) {
+    // Thêm hiệu ứng loading
+    button.classList.add("loading");
+    button.innerText = "🔄 Đang tính toán";
+
+    setTimeout(() => {
+        button.classList.remove("loading");
+        button.innerText = "🎯 Xem Kết Quả";
+        getResult();
+    }, 2000); // Giả lập xử lý 2s
+}
+
+function getResult() {
+    let scores = [0, 0, 0, 0, 0, 0]; // Mảng chứa điểm số cho 6 ngành
+
+    let questions = ["q1", "q2", "q3", "q4", "q5"];
+    let answered = true; // Kiểm tra xem có bỏ sót câu nào không
+
+    questions.forEach((q) => {
+        let answer = document.querySelector(`input[name="${q}"]:checked`);
+        if (answer) {
+            scores[parseInt(answer.value) - 1]++;
+        } else {
+            answered = false;
+        }
+    });
+
+    if (!answered) {
+        document.getElementById("result").innerText = "⚠ Vui lòng trả lời tất cả câu hỏi trước khi xem kết quả!";
+        document.getElementById("result").style.color = "red";
+        return;
+    }
+
+    let maxScore = Math.max(...scores);
+    let careerIndex = scores.indexOf(maxScore);
+
+    let careers = [
+        "Lập trình phần mềm (Software Developer)",
+        "Khoa học dữ liệu (Data Science)",
+        "An ninh mạng (Cybersecurity)",
+        "Quản trị hệ thống (System Administrator)",
+        "Thiết kế UI/UX",
+        "Kỹ sư AI/Machine Learning"
+    ];
+
+    document.getElementById("result").innerText = `✅ Bạn phù hợp với: ${careers[careerIndex]}`;
+    document.getElementById("result").style.color = "green";
+}
+
+
+    </script>
+  </body>
+</html>

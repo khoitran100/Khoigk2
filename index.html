@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Hướng Nghiệp CNTT - Giả Kim</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico/favicon-96x96.png">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
+	
+	<style>
+
+.owl-stage-outer {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.owl-nav {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.offset-lg-1 {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.section-heading {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.fun-facts {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.owl-stage-outer {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+
+/* Hiệu ứng fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.glow {
+    font-size: 40px;
+    color: #black;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Viền phát sáng liên tục */
+.glow::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00, #ff0099);
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Khi hover, chữ phát sáng mạnh và có viền ánh sáng */
+.glow:hover {
+    color: #b3ff1a;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffcc00, 0 0 40px #ff0099;
+}
+
+.glow:hover::before {
+    opacity: 1;
+}
+</style>
+	
+  </head>
+
+<body>
+  <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let searchBox = document.getElementById("searchBox");
+
+            searchBox.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // Stop any default behavior
+                    window.location.href = "404.html"; // Redirect to the 404 page
+                }
+            });
+        });
+    </script>
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+				   <a href="index.html" class="logo">
+				   <img src="assets/images/logo.png" class="logo-title" alt="logo">
+				   
+				   </a>
+					 <a href="index.html" class="logo">
+                        <h1>giả kim</h1>
+                    </a>
+
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Nhập thứ bạn muốn tìm..." id='searchBox' name="searchKeyword" onkeypress="handle" autocomplete="off" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#top" class="active">Trang Chủ</a></li>
+                      <li><a href="service.html">Tư Vấn</a></li>
+                      <li><a href="courses.html">Thông Tin</a></li>
+                      <li><a href="team.html">Đội Ngũ</a></li>
+                      <li><a href="event.html">Sự Kiện</a></li>
+                      <li><a href="lienhe.html">Liên Hệ</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-banner">
+            <div class="item item-1">
+              <div class="header-text">
+                <span class="category">Tổng quan về ngành CNTT</span>
+                <h2 style="color: #FFFFFF;  background: rgba(0, 0, 0, 0.5);text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">🚀 <i>"Bước Chân Vào Thế Giới Công Nghệ - Bạn Đã Sẵn Sàng?"</i></h2>
+                <p style="color: #FFFFFF;  background: rgba(0, 0, 0, 0.5);">Khám phá ngành CNTT, tìm hiểu các lĩnh vực tiềm năng và bắt đầu hành trình nghề nghiệp của bạn ngay hôm nay!</p>
+              </div>
+            </div>
+            <div class="item item-2">
+              <div class="header-text">
+                <span class="category">Lộ trình học tập & định hướng nghề nghiệp</span>
+                <h2 style="color: #FFFFFF;  background: rgba(0, 0, 0, 0.5);text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">🎯<i>"Lập Trình, AI, Cybersecurity – Bạn Hợp Với Ngành Nào?"</i></h2>
+                <p style="color: #FFFFFF;  background: rgba(0, 0, 0, 0.5);">Tìm kiếm con đường sự nghiệp phù hợp với bạn thông qua các bài kiểm tra, tư vấn và tài nguyên học tập hữu ích.</p>
+              </div>
+            </div>
+            <div class="item item-3">
+              <div class="header-text">
+                <span class="category">Sự kiện & Cơ hội nghề nghiệp</span>
+                <h2 style="color: #FFFFFF;  background: rgba(0, 0, 0, 0.5);text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">📢 <i>"Hackathon, Webinar, Workshop – Cơ Hội Kết Nối & Phát Triển!"</i></h2>
+                <p style="color: #FFFFFF;  background: rgba(0, 0, 0, 0.5);">Tham gia các sự kiện công nghệ để học hỏi, kết nối với chuyên gia và phát triển sự nghiệp IT của bạn!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="section about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-1">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" 
+				style="white-space: nowrap">
+                  Hướng Nghiệp Dựa Trên Điểm Mạnh Của Bạn!
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                🔹 Chúng tôi không chỉ cung cấp thông tin chung về ngành CNTT mà còn giúp bạn <strong> tìm ra lộ trình phù hợp nhất với bản thân.</strong><br>
+				🔹 Bạn sẽ nhận được bài test đánh giá kỹ năng và gợi ý nghề nghiệp theo sở thích, tính cách và năng lực.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Học Hỏi Từ Những Người Đi Trước!
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                🔹 Trang web không chỉ cung cấp thông tin mà còn có <strong>diễn đàn, hội nhóm, livestream</strong> để bạn trò chuyện với những chuyên gia thực tế.<br>
+				🔹 Bạn có thể tham gia <code> mentorship 1-1, hội thảo chuyên sâu, các sự kiện networking</code>  để kết nối với người trong ngành.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                 Không Chỉ Lý Thuyết – Chúng Tôi Đưa Bạn Vào Thực Tế!
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                🔹 Các khóa học hướng nghiệp không chỉ là lý thuyết mà có <strong> bài tập thực tế, dự án mô phỏng, thử thách coding.</strong><br>
+				🔹 Bạn sẽ có cơ hội làm việc nhóm, tham gia Hackathon, thử thách với các bài toán thực tế của doanh nghiệp.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Không Chỉ Học, Chúng Tôi Giúp Bạn Có Việc Làm!
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                🔹 Chúng tôi hợp tác với các công ty công nghệ để giúp bạn <code> tiếp cận cơ hội thực tập, việc làm </code> ngay từ khi học.<br>
+				🔹 Ngoài ra, bạn có thể <strong> nhận học bổng công nghệ, hỗ trợ tài chính </strong> để phát triển sự nghiệp.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6 style="margin-bottom: 20px;margin-top:10px;">Về chúng tôi</h6>
+            <h2>🔥 Điều Gì Khiến Chúng Tôi Khác Biệt?</h2>
+            <p style="font-size:14px"><i>🛠️ Khác với các nền tảng hướng nghiệp khác, chúng tôi không chỉ cung cấp thông tin chung chung. Thay vào đó, bạn sẽ có một hành trình hướng nghiệp được cá nhân hóa, thực chiến và kết nối chặt chẽ với chuyên gia trong ngành.</i><br>
+			🌟<strong> 4 Yếu Tố Giúp Chúng Tôi Đặc Biệt:</strong><br>
+			1️⃣ <strong>Hướng Nghiệp Cá Nhân Hóa </strong>🎯 – Lộ trình phù hợp với kỹ năng và sở thích của bạn.<br>
+			2️⃣ <strong>Kết Nối Với Chuyên Gia & Cộng Đồng </strong>💬 – Học hỏi từ người đi trước và tham gia mentorship.<br>
+			3️⃣ <strong>Học Tập Thực Chiến</strong> 🚀 – Không chỉ lý thuyết, bạn sẽ thực hành qua dự án thực tế.<br>
+			4️⃣ <strong>Cơ Hội Việc Làm & Học Bổng</strong> 📑 – Hỗ trợ tìm việc, thực tập và học bổng công nghệ.<br>
+			💡 <strong>Với những giá trị trên, chúng tôi cam kết đồng hành cùng bạn trên con đường chinh phục ngành CNTT!</strong>
+			</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+ <h2 class="glow" style="margin-bottom: 20px"> tìm hiểu về cntt</h2> 
+ <div class="video-container" style="margin-left:290px">
+        <video src="assets/videos/trang chu.mp4" controls autoplay muted loop playsinline></video>
+    </div>
+
+  
+
+  <div class="section fun-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="counter" style="margin-left: -160px">
+                  <h2 class="timer count-title count-number" data-to="900" data-speed="8000"></h2>
+                   <p class="count-text">Học viên đã được hướng nghiệp</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter" style="margin-left: -100px">
+                  <h2 class="timer count-title count-number" data-to="800" data-speed="8000"></h2>
+                  <p class="count-text ">Học viên hài lòng với chất lượng hướng nghiệp</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="400" data-speed="8000"></h2>
+                  <p class="count-text ">Học viên thành công trong công việc</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter end" style="margin-left: -50px">
+                  <h2 class="timer count-title count-number" data-to="4" data-speed="1000"></h2>
+                  <p class="count-text ">Năm Kinh Nghiệm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="section testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="owl-carousel owl-testimonials">
+            <div class="item">
+              <p>💬 "Trước đây, mình thực sự hoang mang về ngành CNTT. Nhờ Giả Kim, mình đã tìm được hướng đi phù hợp và hiện tại đang theo học Web Development với sự tự tin hơn rất nhiều!"</p>
+              <div class="author">
+                <img src="assets/images/nhanxet/sinhvien1.png" alt="" style="height:80px;margin-top:9px">
+                <span class="category">Sinh Viên IT</span>
+                <h4>Nguyễn Phú Vinh </h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>💬 "Trước khi tham gia Giả Kim, mình chưa biết bắt đầu từ đâu với lập trình. Nhờ định hướng chi tiết, mình đã tự tin ứng tuyển vào các công ty lớn!"</p>
+              <div class="author">
+                <img src="assets/images/nhanxet/backend.jpg" alt="" style="height:80px; margin-top:9px">
+                <span class="category">Backend Developer tại VNG</span>
+                <h4> Nguyễn Minh Quân</h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>💬 "Trang web đã giúp mình hiểu rõ hơn về các lĩnh vực trong CNTT. Nhờ đó, mình chọn đúng hướng đi phù hợp với bản thân!"</p>
+              <div class="author">
+                <img src="assets/images/nhanxet/sinhvien2.jpg" alt="" style="object-fit: cover; object-position: center; height:80px;margin-top:9px">
+                <span class="category">Sinh viên IT tại Đại học Bách Khoa</span>
+                <h4>Trần Thanh Hòa</h4>
+              </div>
+            </div>
+			<div class="item">
+              <p>💬 "Tôi rất ấn tượng với cách Giả Kim hỗ trợ học viên. Các tài nguyên trên website thực sự hữu ích, giúp người mới bắt đầu có định hướng rõ ràng!"</p>
+              <div class="author">
+                <img src="assets/images/nhanxet/senior.png" alt="" style="object-fit: cover; object-position: top; height:80px;margin-top:9px">
+                <span class="category">Senior Software Engineer tại FPT Software</span>
+                <h4>Nguyễn Văn Phúc</h4>
+              </div>
+            </div>
+			<div class="item">
+              <p>💬 "Giả Kim đã giúp chúng tôi tìm được những ứng viên giỏi, có tư duy sáng tạo và kỹ năng thực tế. Đây là một nguồn nhân lực chất lượng cho ngành CNTT!"</p>
+              <div class="author">
+                <img src="assets/images/nhanxet/chutich.jpg" alt="" style="margin-bottom:-100px">
+                <span class="category" style="margin-left:120px; white-space:nowrap">CTO tại Startup Tech - Đối tác công nghệ của Giả Kim</span>
+                <h4 style="margin-left:120px">Nguyễn Đình Hưng</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>Nhận xét / Tâm sự </h6>
+            <h2>📢Những Gì Họ Nói Về Chúng Tôi?</h2>
+            <p style="white-space:nowrap; font-size:16px">Người thật, trải nghiệm thật! Những chia sẻ từ học viên, mentor <br>và chuyên gia đã đồng hành cùng Hướng Nghiệp CNTT - Giả Kim.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2036 Công Ty TNHH Giả Kim. Mọi quyền được bảo lưu. &nbsp;&nbsp;&nbsp; Designer: <a href="tmk.html" rel="nofollow" target="_blank">Khôi Trần</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>

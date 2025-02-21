@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Đội Ngũ - Hướng Nghiệp CNTT - Giả Kim</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/service.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico/favicon-96x96.png">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
+<style>
+footer {
+  margin-top: -50px;
+  position: relative;
+  background-color: #7a6ad8;
+  vertical-align: middle;
+  min-height: 150px;
+  border-radius: 150px 150px 0px 0px;
+}
+
+
+
+.team-member {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hiệu ứng fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glow {
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  margin-top: 60px;
+  animation: glow 0.6s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #cc5500, 0 0 20px #cc5500, 0 0 30px #cc5500, 0 0 40px #cc5500, 0 0 50px #cc5500;
+  }
+}
+
+.lime {
+    font-size: 40px;
+    color: #black;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Viền phát sáng liên tục */
+.lime::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00, #ff0099);
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Khi hover, chữ phát sáng mạnh và có viền ánh sáng */
+.lime:hover {
+    color: #b3ff1a;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffcc00, 0 0 40px #ff0099;
+}
+
+.lime:hover::before {
+    opacity: 1;
+}
+
+.video-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff00ff, #ffcc00, #00ffff, #ff0099);
+            background-size: 300% 300%;
+            animation: gradientMove 2s infinite alternate;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hiệu ứng đổi màu viền */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Chỉnh kích thước và bo góc iframe */
+        .video-container video {
+            width: 100%;
+            height: 450px;
+            display: block;
+            border-radius: 50px;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+
+</style>
+  </head>
+
+<body>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let searchBox = document.getElementById("searchBox");
+
+            searchBox.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // Stop any default behavior
+                    window.location.href = "404.html"; // Redirect to the 404 page
+                }
+            });
+        });
+    </script>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+				   <img src="assets/images/logo.png" class="logo-title" alt="logo">
+				   </a>
+				   
+					 <a href="index.html" class="logo">
+					 
+                        <h1>giả kim</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Nhập thứ bạn muốn tìm..." id='searchBox' name="searchKeyword" onkeypress="handle" autocomplete="off"/>
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Trang Chủ</a></li>
+                      <li><a href="service.html">Tư Vấn</a></li>
+                      <li><a href="courses.html">Thông Tin</a></li>
+                      <li class="scroll-to-section"><a href="#team" class="active">Đội Ngũ</a></li>
+                      <li><a href="event.html">Sự Kiện</a></li>
+                      <li><a href="lienhe.html">Liên Hệ</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top" width="10"></div>
+              <div class="header-text">
+                  </div>
+
+	<div class="center-text">
+	<h1 class="wave-gradient-text" >Thành Viên của Giả Kim</h1>
+	</div>
+
+	
+  <div class="row align-items-stretch">			  	  
+  <div class="team section" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 order-lg-1 team-fix">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/pfp/dnd.jfif" alt="">
+              <span class="category">Lập Trình Viên</span>
+              <h4>Đào Ngọc Duy</h4>
+			   <p>Hài hước và chỉ bảo học viên nhiệt tình. </p>			
+              <ul class="social-icons">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 order-lg-2">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/pfp/anthy.jfif" alt="">
+              <span class="category">Tư Vấn Viên</span>
+              <h4>Lê Vũ An Thy</h4>
+			   <p>Giúp học viên tìm được đam mê và con đường đi đến thành công. </p>			
+              <ul class="social-icons">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 order-lg-3">
+          <div class="team-member">
+            <div class="main-content" style="padding-bottom: 68px;">
+              <img src="assets/images/pfp/nhumy.jfif" alt="">
+              <span class="category">Thiết Kế Viên</span>
+              <h4>Nguyễn Huỳnh Như Mỹ</h4>
+			   <p>Hiểu tâm lý và đặt mình vào vị trí của học viên. </p>			
+              <ul class="social-icons">
+              </ul>
+            </div>
+          </div>
+        </div>
+		
+		
+		
+
+        <div class="col-lg-3 col-md-6 order-lg-4">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/pfp/tmk.jfif" alt="">
+              <span class="category">Lập Trình Viên</span>
+              <h4>Trần Minh Khôi</h4>
+			  <p>Chỉ dạy và quan tâm học viên như con ruột. </p>			  
+              <ul class="social-icons">
+              </ul>
+            </div>
+          </div>
+        </div>
+		<div class="col-lg-3 col-md-6 order-lg-5 ">
+          <div class="team-member">
+            <div class="main-content" style="padding-bottom: 124px;">
+              <img src="assets/images/pfp/vietung.jfif" alt="">
+              <span class="category">Lập Trình Viên</span>
+              <h4>Đàm Viết Ưng</h4>
+			  <p>Hết mình vì công việc và rất thân thiện.</p>
+              <ul class="social-icons">
+              </ul>
+            </div>
+          </div>
+        </div>
+		<div class="col-lg-3 col-md-6 order-lg-last ">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/pfp/leanh.jpg" alt="" height="480">
+              <span class="category">Giảng Viên</span>
+              <h4>Nguyễn Lê Anh</h4>
+			  <p>- Người thầy tận tụy và yêu thương học trò. <br> - Là một trong những người giỏi nhất thế giới về công nghệ thông tin.</p>
+              <ul class="social-icons">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  
+    
+ <h2 class="lime" style="margin-bottom: 20px"> giới thiệu các thành viên</h2> 
+ <div class="video-container" style="margin-left:290px">
+        <video src="assets/videos/thanhvien.mp4" controls autoplay muted loop playsinline></video>
+    </div>
+  
+  <h2 class="glow">BẢNG PHÂN CÔNG NHIỆM VỤ</h2>
+  
+  <table>
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>STT</th>
+            <th>Nhóm</th>
+            <th>Nhiệm vụ</th>
+            <th>Chủ đề thiết kế</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="table-column">Trần Minh Khôi</td>
+            <td>12</td>
+            <td rowspan="6" style="background-color:#f5f5dc">6</td>
+            <td class="table-column">Làm nền và trang chủ cho web</td>
+            <td rowspan="6" style="background-color:#f5f5dc">Web hướng nghiệp ngành CNTT</td> 
+        </tr>
+        <tr>
+            <td class="table-column">Đàm Viết Ưng</td>
+            <td>33</td>
+
+            <td class="table-column">Làm thông tin</td>
+        </tr>
+        <tr>
+            <td class="table-column">Đào Ngọc Duy</td>
+            <td>4</td>
+  
+            <td class="table-column">Làm thành viên</td>
+        </tr>
+        <tr>
+            <td class="table-column">Nguyễn Huỳnh Như Mỹ</td>
+            <td>17</td>
+
+            <td class="table-column">Làm sự kiện</td>
+        </tr>
+        <tr>
+            <td class="table-column">Lê Vũ An Thy</td>
+            <td>29</td>
+
+            <td class="table-column" >Làm tư vấn</td>
+        </tr>
+        <tr>
+            <td class="table-column">Nguyễn Lê Anh</td>
+            <td>2</td>
+
+            <td class="table-column">Làm liên hệ</td>
+        </tr>
+    </tbody>
+</table>
+
+
+  
+  
+  
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2036 Công Ty TNHH Giả Kim. Mọi quyền được bảo lưu. &nbsp;&nbsp;&nbsp; Designer: <a href="tmk.html" rel="nofollow" target="_blank">Khôi Trần</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
