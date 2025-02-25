@@ -84,6 +84,126 @@ https://templatemo.com/tm-586-scholar
 .glow:hover::before {
     opacity: 1;
 }
+
+        /* Mobile fixes */
+        body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .header-sticky {
+            z-index: 1000; /* Ensure header stays above content */
+        }
+        .video-container {
+			width: 100%;
+			max-width: 800px; /* Adjust this to control video width */
+			margin: 60px auto; /* Centers horizontally */
+			padding: 15px 15px; /* Adds breathing room on small screens */
+			height: 415px;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .counter {
+            margin-left: 0 !important; /* Override inline margins */
+            text-align: center;
+        }
+        .search-input input {
+            width: 100%;
+            max-width: 300px; /* Limit width on desktop */
+        }
+
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .main-banner {
+                padding-top: 80px; /* Adjust for smaller header */
+            }
+            .header-text h2 {
+                font-size: 24px; /* Reduce heading size */
+                white-space: normal; /* Allow wrapping */
+            }
+            .header-text p {
+                font-size: 14px;
+            }
+            .section-heading h2 {
+                font-size: 28px;
+            }
+            .glow {
+                font-size: 28px; /* Smaller on mobile */
+            }
+            .video-container {
+                padding: 0 10px;
+            }
+            .fun-facts .col-md-6 {
+                margin-bottom: 20px; /* Stack counters vertically */
+            }
+            .testimonials .owl-carousel {
+                padding: 0 10px;
+            }
+            .search-input {
+                margin-top: 10px;
+            }
+            .nav {
+                text-align: center;
+            }
+		   .video-container {
+				width: 100%;
+				max-width: 800px; /* Adjust this to control video width */
+				margin: 60px auto; /* Centers horizontally */
+				padding: 15px 15px; /* Adds breathing room on small screens */
+				height: 300px;
+			}
+			.video-container iframe {
+				width: 100%;
+				height: 100%;
+			}
+			.footer  {
+				width: 100%; /* Ensure full width */
+				font-size: 14px; /* Adjust text size for readability */
+				overflow-wrap: break-word; /* Wrap long words */
+				white-space: normal; /* Allow text to wrap naturally */
+			}
+        }
+        @media (max-width: 480px) {
+            .header-text h2 {
+                font-size: 20px;
+            }
+            .section-heading h2 {
+                font-size: 24px;
+            }
+            .glow {
+                font-size: 24px;
+            }
+            .accordion-button {
+                font-size: 14px;
+                white-space: normal; /* Allow wrapping */
+            }
+			.logo {
+				display: block !important;
+				width: 30%;
+			}
+			.logo h1 {
+				display: block !important;
+				width: 250%;
+			}
+		   .video-container {
+				width: 100%;
+				max-width: 800px; /* Adjust this to control video width */
+				margin: 60px auto; /* Centers horizontally */
+				padding: 15px 15px; /* Adds breathing room on small screens */
+				height: 300px;
+			}
+			.video-container iframe {
+				width: 100%;
+				height: 100%;
+			}
+			.footer  {
+				width: 100%; /* Ensure full width */
+				font-size: 14px; /* Adjust text size for readability */
+				overflow-wrap: break-word; /* Wrap long words */
+				white-space: normal; /* Allow text to wrap naturally */
+			}
+        }
 </style>
 	
   </head>
@@ -155,7 +275,7 @@ https://templatemo.com/tm-586-scholar
                   </div>
   
   <h2 class="glow" style="text-transform:uppercase;margin-top:70px;margin-bottom:-50px">sơ bộ về sự kiện của chúng tôi</h2>
-<div class="video-container" style="margin-left:280px;margin-top:80px;" >
+<div class="video-container"  >
         <iframe 
             width="560" height="315" src="https://www.youtube.com/embed/XqFH5vQIGV8?autoplay=1&mute=1&si=xAHtZnVujvUvsq0_"
             allow="autoplay; encrypted-media"

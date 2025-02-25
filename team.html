@@ -118,6 +118,7 @@ footer {
             animation: gradientMove 2s infinite alternate;
             box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+			margin: 0 auto;
         }
 
         /* Hiệu ứng đổi màu viền */
@@ -134,6 +135,139 @@ footer {
             border-radius: 50px;
             border: none;
             transition: transform 0.3s ease-in-out;
+        }
+		
+		        /* Mobile fixes */
+        body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .header-sticky {
+            z-index: 1000; /* Ensure header stays above content */
+        }
+        .counter {
+            margin-left: 0 !important; /* Override inline margins */
+            text-align: center;
+        }
+        .search-input input {
+            width: 100%;
+            max-width: 300px; /* Limit width on desktop */
+        }
+		.footer {
+		  display: block; /* Ensure it’s visible */
+		  width: 100%; /* Full width to adapt to screen */
+		  min-height: 50px; /* Minimum height, adjust as needed */
+		  overflow: visible; /* Prevent text from being clipped */
+		  position: relative; /* Keep it in natural flow */
+		  padding: 10px; /* Add spacing around text */
+		}
+
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .main-banner {
+                padding-top: 80px; /* Adjust for smaller header */
+            }
+            .header-text h2 {
+                font-size: 24px; /* Reduce heading size */
+                white-space: normal; /* Allow wrapping */
+            }
+            .header-text p {
+                font-size: 14px;
+            }
+            .section-heading h2 {
+                font-size: 28px;
+            }
+            .glow {
+                font-size: 28px; /* Smaller on mobile */
+            }
+            .video-container {
+                padding: 0 10px;
+            }
+            .fun-facts .col-md-6 {
+                margin-bottom: 20px; /* Stack counters vertically */
+            }
+            .testimonials .owl-carousel {
+                padding: 0 10px;
+            }
+            .search-input {
+                margin-top: 10px;
+            }
+            .nav {
+                text-align: center;
+            }
+			.footer  {
+				width: 100%; /* Ensure full width */
+				font-size: 14px; /* Adjust text size for readability */
+				overflow-wrap: break-word; /* Wrap long words */
+				white-space: normal; /* Allow text to wrap naturally */
+			}
+        }
+        @media (max-width: 480px) {
+            .header-text h2 {
+                font-size: 20px;
+            }
+            .section-heading h2 {
+                font-size: 24px;
+            }
+            .glow {
+                font-size: 24px;
+            }
+            .accordion-button {
+                font-size: 14px;
+                white-space: normal; /* Allow wrapping */
+            }
+			.logo {
+				display: block !important;
+				width: 30%;
+			}
+			.logo h1 {
+				display: block !important;
+				width: 250%;
+			}
+			.footer  {
+				width: 100%; /* Ensure full width */
+				font-size: 14px; /* Adjust text size for readability */
+				overflow-wrap: break-word; /* Wrap long words */
+				white-space: normal; /* Allow text to wrap naturally */
+			}
+			.video-container {
+				position: relative;
+				width: 100%;
+				max-width: 800px;
+				border-radius: 50px;
+				overflow: hidden;
+				padding: 15px;
+				background: linear-gradient(45deg, #ff00ff, #ffcc00, #00ffff, #ff0099);
+				background-size: 300% 300%;
+				animation: gradientMove 2s infinite alternate;
+				box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+				transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+			}
+
+				/* Hiệu ứng đổi màu viền */
+				@keyframes gradientMove {
+					0% { background-position: 0% 50%; }
+					100% { background-position: 100% 50%; }
+				}
+			
+			.video-container video {
+				width: 100%;
+				height: 450px;
+				display: block;
+				border-radius: 50px;
+				border: none;
+				transition: transform 0.3s ease-in-out;
+			}
+			table {
+				width: 80%;
+				margin: 100px auto;
+				border-collapse: collapse;
+				background: #bebebe;
+				box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+				border-radius: 8px;
+				overflow: hidden;
+				animation: fadeIn 0.8s ease-in-out;	
+			}
         }
 
 
@@ -298,7 +432,7 @@ footer {
   
     
  <h2 class="lime" style="margin-bottom: 20px"> giới thiệu các thành viên</h2> 
- <div class="video-container" style="margin-left:290px">
+ <div class="video-container">
         <video src="assets/videos/thanhvien.mp4" controls autoplay muted loop playsinline></video>
     </div>
   

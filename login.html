@@ -83,6 +83,141 @@ https://templatemo.com/tm-586-scholar
             border: none;
             transition: transform 0.3s ease-in-out;
         }
+		
+				        /* Mobile fixes */
+        body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .header-sticky {
+            z-index: 1000; /* Ensure header stays above content */
+        }
+
+        .counter {
+            margin-left: 0 !important; /* Override inline margins */
+            text-align: center;
+        }
+        .search-input input {
+            width: 100%;
+            max-width: 300px; /* Limit width on desktop */
+        }
+		.register-btn {
+			margin-top: 160px;
+			margin-right: -350px;
+		}
+		.lienhe-btn {
+			margin-top: 360px;
+		}
+		.register-btn {
+			margin-top: 0px;
+			margin-right: -20px;
+		}
+
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .main-banner {
+                padding-top: 80px; /* Adjust for smaller header */
+            }
+            .header-text h2 {
+                font-size: 24px; /* Reduce heading size */
+                white-space: normal; /* Allow wrapping */
+            }
+            .header-text p {
+                font-size: 14px;
+            }
+            .section-heading h2 {
+                font-size: 28px;
+            }
+            .glow {
+                font-size: 28px; /* Smaller on mobile */
+            }
+            .video-container {
+                padding: 0 10px;
+            }
+            .fun-facts .col-md-6 {
+                margin-bottom: 20px; /* Stack counters vertically */
+            }
+            .testimonials .owl-carousel {
+                padding: 0 10px;
+            }
+            .search-input {
+                margin-top: 10px;
+            }
+            .nav {
+                text-align: center;
+            }
+			.contact-us .section-heading {
+				margin-top: -100px;
+			}
+		   .video-container {
+				width: 100%;
+				max-width: 800px; /* Adjust this to control video width */
+				margin: 60px auto; /* Centers horizontally */
+				padding: 15px 15px; /* Adds breathing room on small screens */
+				height: 300px;
+			}
+			.video-container iframe {
+				width: 100%;
+				height: 100%;
+			}
+			.footer  {
+				width: 100%; /* Ensure full width */
+				font-size: 14px; /* Adjust text size for readability */
+				overflow-wrap: break-word; /* Wrap long words */
+				white-space: normal; /* Allow text to wrap naturally */
+			}
+        }
+        @media (max-width: 480px) {
+            .header-text h2 {
+                font-size: 20px;
+            }
+            .section-heading h2 {
+                font-size: 24px;
+            }
+            .glow {
+                font-size: 24px;
+            }
+            .accordion-button {
+                font-size: 14px;
+                white-space: normal; /* Allow wrapping */
+            }
+			.logo {
+				display: block !important;
+				width: 30%;
+			}
+			.logo h1 {
+				display: block !important;
+				width: 250%;
+			}
+		   .video-container {
+				width: 100%;
+				max-width: 800px; /* Adjust this to control video width */
+				margin: 60px auto; /* Centers horizontally */
+				padding: 15px 15px; /* Adds breathing room on small screens */
+				height: 300px;
+			}
+			.video-container iframe {
+				width: 100%;
+				height: 100%;
+			}
+			.contact-us .section-heading {
+				margin-top: -100px;
+			}
+			.register-btn {
+				margin-right: -200px;
+				margin-top: 0px;
+			}
+			.login-btn {
+				margin-right: -380px;
+				margin-top: -39px;
+			}
+			.footer  {
+				width: 100%; /* Ensure full width */
+				font-size: 14px; /* Adjust text size for readability */
+				overflow-wrap: break-word; /* Wrap long words */
+				white-space: normal; /* Allow text to wrap naturally */
+			}
+        }
 </style>
 
 <body>
@@ -186,7 +321,7 @@ https://templatemo.com/tm-586-scholar
 				  <fieldset>
 					<button type="submit" id="form-submit" class="submit-btn">Đăng Nhập</button>
 				  </fieldset>
-				  <a href="lienhe.html" class="lienhe-btn" style="margin-top: 360px; margin-right: 30px;">Liên Hệ</a>
+				  <a href="lienhe.html" class="lienhe-btn" >Liên Hệ</a>
 				  <a href="register.html" class="register-btn">Đăng Ký</a>
 				</div>
 			  </div>
