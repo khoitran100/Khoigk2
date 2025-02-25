@@ -333,6 +333,7 @@ Header Style
 	border-radius: 50%;
 }
 
+
 .header-area .main-nav .logo h1 {
   font-family: 'Dancing script', cursive;
   font-size: 36px;
@@ -347,6 +348,17 @@ Header Style
    margin-left:-20px;
 }
 
+@media (max-width: 768px) {
+	.header-area .main-nav .logo-title {
+		margin-left: -25px;
+	}
+	.header-area .main-nav .logo h1 {
+		margin-left: 15px;
+	}
+	.logo {
+		margin-left: -10px;
+	}
+}
 
 .background-header .main-nav .logo,
 .background-header .main-nav #search {

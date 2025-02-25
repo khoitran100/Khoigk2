@@ -41,6 +41,8 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -346,6 +348,19 @@ Header Style
    max-width:1000px;
    margin-left:-20px;
 }
+
+@media (max-width: 768px) {
+	.header-area .main-nav .logo-title {
+		margin-left: -25px;
+	}
+	.header-area .main-nav .logo h1 {
+		margin-left: 15px;
+	}
+	.logo {
+		margin-left: -10px;
+	}
+}
+
 
 .background-header .main-nav .logo,
 .background-header .main-nav #search {
@@ -2496,7 +2511,7 @@ body {
     border-radius: 8px;
     margin-top: 20px;
     
-    max-width: 735px; /* Tăng chiều rộng để kéo dài sang phải */
+    max-width: 54.7%; /* Tăng chiều rộng để kéo dài sang phải */
     width: 90%; /* Điều chỉnh linh hoạt theo kích thước màn hình */
     
     margin: 20px auto;
@@ -2998,7 +3013,7 @@ td[rowspan] {
         .video-container {
             position: relative;
             width: 80%;
-            max-width: 800px;
+            max-width: 60%;
             border-radius: 50px;
             overflow: hidden;
             padding: 15px;
@@ -3017,7 +3032,7 @@ td[rowspan] {
 
         /* Chỉnh kích thước và bo góc iframe */
         .video-container iframe {
-            width: 100%;
+			width: 100%;
             height: 450px;
             display: block;
             border-radius: 50px;
@@ -3043,7 +3058,5 @@ td[rowspan] {
             border: none;
             transition: transform 0.3s ease-in-out;
         }
-		
-	
-
 /* VIDEO*/
+
