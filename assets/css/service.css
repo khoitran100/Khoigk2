@@ -1405,6 +1405,8 @@ Events Style
   position: relative;
   padding: 40px;
   margin-bottom: 96px;
+  border: 1px solid rgba(0, 0, 0, 0.15); /* Thêm viền nhẹ */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ */
 }
 
 .events .item .image {
@@ -1478,8 +1480,12 @@ Events Style
   z-index: 1;
   color: #fff;
   border-radius: 60px 0px 0px 60px;
+  transition: transform 0.3s ease;
 }
 
+.events .item a:hover {
+	transform: scale(1.07);
+}
 
 /* 
 ---------------------------------------------
@@ -2463,8 +2469,12 @@ body {
     border-radius: 5px;
     object-fit: cover;
     margin-right: 10px;
+	transition: transform 0.3s ease;
 }
 
+.article-list img:hover {
+	transform: scale(1.2);
+}
 .article-list a {
     text-decoration: none;
     font-size: 14px;

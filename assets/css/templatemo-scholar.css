@@ -926,6 +926,8 @@ About Style
   border-radius: 40px !important;
 }
 
+
+	
 .accordion-button:not(.collapsed) {
   color: #7a6ad8;
   background-color: #fff;
@@ -936,6 +938,14 @@ h2.accordion-header button {
   font-family: 'Arial';
   font-size: 16px;
   font-weight: 600;
+}
+
+.accordion-item .accordion-header {
+	transition: transform 0.3s ease;
+}
+
+.accordion-item .accordion-header:hover {
+	transform: scale(1.05);
 }
 
 .accordion-button::after {
@@ -951,12 +961,14 @@ h2.accordion-header button {
   border-radius: 50%;
   background-color: #7a6ad8;
   color: #fff;
+  transition: transform 0.3s ease;
 }
 
 .accordion-button:not(.collapsed)::after {
   background-image: none;
-  line-height: 32px;
+  line-height: 28px;
   content: '-';
+  transition: transform 0.3s ease;
 }
 
 .accordion-body {
@@ -964,7 +976,13 @@ h2.accordion-header button {
   font-size: 14px;
   line-height: 28px;
   color: #4a4a4a;
+  transition: max-height 0.5s ease;
 }
+
+.accordion-body:not(.collapsed)::after {
+	transition: transform 0.3s ease;
+}
+	
 
 .about-us .section-heading {
   margin-left: 60px;
